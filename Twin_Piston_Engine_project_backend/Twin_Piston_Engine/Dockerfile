@@ -12,7 +12,7 @@ WORKDIR /app
 RUN pip install --no-cache-dir uv
 
 # Copy dependency specification first for layer caching
-COPY pyproject.toml README.md./
+COPY pyproject.toml README.md ./
 RUN uv sync --no-dev
 
 # Copy source code and application files
